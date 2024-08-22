@@ -11,7 +11,9 @@ git_clone_path master https://github.com/coolsnowwolf/lede package/boot target/l
 
 git_clone_path master https://github.com/coolsnowwolf/lede mv target/linux/generic
 
-rm -rf  package/kernel/ksmbd
+rm -rf  package/kernel/ksmbd package/kernel/mac80211
+
+git_clone_path c640f7b93736621b4d56627e4f6ab824093f9c3d https://github.com/openwrt/openwrt package/kernel/mac80211
 
 wget -N https://github.com/coolsnowwolf/lede/raw/master/include/kernel-5.10 -P include/
 wget -N https://github.com/coolsnowwolf/lede/raw/master/include/kernel-6.1 -P include/
